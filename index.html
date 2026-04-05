@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Official wiki for Die Letzte Seite — a visual novel game." />
+  <title>Die Letzte Seite — Wiki</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400&family=EB+Garamond:ital,wght@0,400;1,400&family=Special+Elite&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700;900&display=swap" rel="stylesheet">
+  <!-- External CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <h1>Die Letzte Seite</h1>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#story">Story</a></li>
+      <li><a href="#characters">Characters</a></li>
+      <li><a href="#updates">Updates</a></li>
+      <li><a href="#system">System Req.</a></li>
+    </ul>
+  </nav>
+
+  <header class="hero" id="home">
+    <p class="eyebrow fade">Official Game Wiki</p>
+    <h2 class="fade">
+      Die Letzte Seite
+      <em>The Last Page</em>
+    </h2>
+    <hr class="fade" />
+    <p class="desc fade">
+      A visual novel of fading worlds and last words &mdash; where every choice rewrites the final page.
+    </p>
+    <p class="fade">
+      "Your time has arrived. You need to know. Make haste. Find your page. The one where you belong."
+    </p>
+    
+    <div class="hero-btns fade">
+      <a class="btn-fill" href="#gallery">Browse Gallery</a>
+      <a class="btn-outline" href="#characters">View Characters</a>
+    </div>
+
+    <div class="hero-video-container fade">
+      <video controls poster="assets/images/intro.png">
+        <source src="assets/video/teaser.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+
+  </header>
+
+  <section class="section fade" id="gallery">
+    <h2 class="section-title">CG Gallery</h2>
+    <p class="section-sub">Illustrations &amp; Key Scenes</p>
+
+    <div class="carousel-outer">
+      <button class="carousel-btn btn-prev" onclick="moveSlide(-1)">&#8249;</button>
+      <div class="carousel-clip">
+        <div class="carousel-track" id="ctrack">
+          <div class="carousel-slide">
+            <img src="assets/images/intro.png" class="fade" alt="The First Twilight" style="width:100%; aspect-ratio:16/9; object-fit:cover; display:block;" />
+            <div class="slide-caption">
+              <strong>The First Twilight</strong>
+              <span>Prologue &mdash; Key Visual</span>
+            </div>
+          </div>
+          <div class="carousel-slide">
+            <img src="assets/images/scene2.png" alt="Emma's Awakening" style="width:100%; aspect-ratio:16/9; object-fit:cover; display:block;" />
+            <div class="slide-caption">
+              <strong>Emma's Awakening</strong>
+              <span>Chapter I &mdash; CG Scene</span>
+            </div>
+          </div>
+          <div class="carousel-slide">
+            <img src="assets/images/trial.png" alt="The Trial of the Witches" style="width:100%; aspect-ratio:16/9; object-fit:cover; display:block;" />
+            <div class="slide-caption">
+              <strong>The Trial of the Witches</strong>
+              <span>Chapter II &mdash; Event CG</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-btn btn-next" onclick="moveSlide(1)">&#8250;</button>
+    </div>
+
+    <div class="carousel-dots" id="cdots"></div>
+  </section>
+
+  <section class="section" id="story">
+    <div class="story-container">
+      <h2 class="section-title">THE STORY</h2>
+      <div class="story-block fade">
+        <p>
+          In the library of <strong>Kette</strong> exists a story tampered by magic.
+          Memories fade through the ink incomprehensible by human kind.
+          The ending of which lies hidden within the pages of a certain book.
+        </p>
+        <p>
+          Suddenly "You" awake inside Kette of which feels like home yet not.
+          With unknown yet familiar corridors, dimly lit hallways and neverending rooms.
+          You found a book that bears your name and a page that looks like the void itself.
+        </p>
+        <p class="story-highlight">
+          "You were meant to write the ending the world should face"
+        </p>
+        <p>
+          As "You" venture around the place, you met allies but also enemies you have yet to know... and then suddenly<br>
+          <strong>"Seek the Last Page... Rewrite your fate."</strong><br> words that echoed through the hallways.
+          The clues that tie to the fate of the world and the last page that awaits.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2 class="section-title">Illustrations</h2>
+    <p class="section-sub">Character &amp; Scene Art</p>
+
+    <div class="bento">
+      <div class="bento-cell featured">
+        <img src="assets/images/sakuraba.png" alt="Emma Sakuraba Main Visual" class="fade" style="width:100%; height:100%; object-fit:cover;" />
+        <div class="bento-tag">
+          <strong>Emma Sakuraba &mdash; Main Visual</strong>
+          <span>Protagonist &middot; Key Art</span>
+        </div>
+      </div>
+      <div class="bento-cell">
+        <img src="assets/images/arisa.png" alt="Arisa Shifuji Character Art" class="fade" style="width:100%; height:100%; object-fit:cover;" />
+        <div class="bento-tag">
+          <strong>Arisa Shifuji</strong>
+          <span>Antagonist</span>
+        </div>
+      </div>
+      <div class="bento-cell">
+        <img src="assets/images/nanoka.png" alt="Nanoka Kurobe Character Art" class="fade" style="width:100%; height:100%; object-fit:cover;" />
+        <div class="bento-tag">
+          <strong>Nanoka Kurobe</strong>
+          <span>Neutral</span>
+        </div>
+      </div>
+      <div class="bento-cell tall">
+        <img src="assets/images/leia.png" alt="Leia Hasumi Character Art" class="fade" style="width:100%; height:100%; object-fit:cover;" />
+        <div class="bento-tag">
+          <strong>Leia Hasumi</strong>
+          <span>Ally</span>
+        </div>
+      </div>
+      <div class="bento-cell">
+        <img src="assets/images/coco.png" alt="Coco Sawatori Character Art" class="fade" style="width:100%; height:100%; object-fit:cover;" />
+        <div class="bento-tag">
+          <strong>Coco Sawatori</strong>
+          <span>Ally</span>
+        </div>
+      </div>
+      <div class="bento-cell">
+        <img src="assets/images/hiro.png" alt="Hiro Nikaido Character Art" class="fade" style="width:100%; height:100%; object-fit:cover;" />
+        <div class="bento-tag">
+          <strong>Hiro Nikaido</strong>
+          <span>Ally</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="characters">
+    <h2 class="section-title">Characters</h2>
+    <p class="section-sub">Cast of Die Letzte Seite</p>
+
+    <table class="char-table fade">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Name</th>
+          <th>Faction</th>
+          <th>Role</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>01</td>
+          <td>Emma Sakuraba</td>
+          <td>Magic</td>
+          <td><span class="role-badge">Protagonist</span></td>
+        </tr>
+        <tr>
+          <td>02</td>
+          <td>Arisa Shifuji</td>
+          <td>Dark Magic</td>
+          <td><span class="role-badge">Antagonist</span></td>
+        </tr>
+        <tr>
+          <td>03</td>
+          <td>Nanoka Kurobe</td>
+          <td>Hunter</td>
+          <td><span class="role-badge">Neutral</span></td>
+        </tr>
+        <tr>
+          <td>04</td>
+          <td>Leia Hasumi</td>
+          <td>Mercenary</td>
+          <td><span class="role-badge">Ally</span></td>
+        </tr>
+        <tr>
+          <td>05</td>
+          <td>Coco Sawatori</td>
+          <td>Mercenary</td>
+          <td><span class="role-badge">Ally</span></td>
+        </tr>
+        <tr>
+          <td>06</td>
+          <td>Hiro Nikaido</td>
+          <td>Mercenary</td>
+          <td><span class="role-badge">Ally</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="section" id="updates">
+    <h2 class="section-title">Recent Updates</h2>
+    <p class="section-sub">Wiki Changelog</p>
+
+    <div class="updates-list fade">
+      <div class="update-row">
+        <span class="upd-date">Nov 14, 2025</span>
+        <span class="upd-title">Added Patch 2.4 &mdash; The Hollow Throne dungeon info</span>
+        <span class="upd-tag">Region &middot; Dungeon</span>
+      </div>
+      <div class="update-row">
+        <span class="upd-date">Nov 08, 2025</span>
+        <span class="upd-title">Updated Seraphel ability descriptions</span>
+        <span class="upd-tag">Character &middot; Mechanics</span>
+      </div>
+      <div class="update-row">
+        <span class="upd-date">Oct 29, 2025</span>
+        <span class="upd-title">New bestiary entries &mdash; The Pale Walkers</span>
+        <span class="upd-tag">Bestiary &middot; Lore</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="section req-section" id="system">
+    <h2 class="section-title">System Requirements</h2>
+    <p class="section-sub">PC Specifications</p>
+
+    <table class="req-table">
+      <caption>Minimum and Recommended Specs for Die Letzte Seite</caption>
+      <thead>
+        <tr>
+          <th>Spec</th>
+          <th>Minimum</th>
+          <th>Recommended</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>OS</td>
+          <td>Windows 10 (64-bit)</td>
+          <td>Windows 10 / 11 (64-bit)</td>
+        </tr>
+        <tr>
+          <td>CPU</td>
+          <td>Intel Core i3 / AMD Ryzen 3</td>
+          <td>Intel Core i5 / AMD Ryzen 5</td>
+        </tr>
+        <tr>
+          <td>RAM</td>
+          <td>4 GB</td>
+          <td>8 GB</td>
+        </tr>
+        <tr>
+          <td>GPU</td>
+          <td>Intel HD Graphics 620</td>
+          <td>NVIDIA GTX 1050 / AMD RX 560</td>
+        </tr>
+        <tr>
+          <td>Storage</td>
+          <td>3 GB available</td>
+          <td>5 GB available (SSD)</td>
+        </tr>
+        <tr>
+          <td>DirectX</td>
+          <td>Version 11</td>
+          <td>Version 12</td>
+        </tr>
+        <tr>
+          <td>Sound</td>
+          <td>DirectX compatible</td>
+          <td>DirectX compatible</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Die Letzte Seite Wiki</p>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="mailto:jezekielbolofer09@gmail.com?subject=Die%20Letzte%20Seite%20Wiki%20Inquiry" target="_blank">Contact</a></li>
+    </ul>
+  </footer>
+
+  <!-- External JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
