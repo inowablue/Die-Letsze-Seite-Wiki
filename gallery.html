@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gallery — Die Letzte Seite Wiki</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400&family=EB+Garamond:ital,wght@0,400;1,400&family=Special+Elite&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <h1><a href="index.html" style="text-decoration:none; color:inherit;">Die Letzte Seite</a></h1>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="characters.html">Characters</a></li>
+      <li><a href="gameplay.html">Gameplay</a></li>
+      <li><a href="storyline.html">Storyline</a></li>
+      <li><a href="gallery.html" class="nav-active">Gallery</a></li>
+    </ul>
+  </nav>
+
+  <div class="page-banner">
+    <h2>GALLERY</h2>
+    <p>CG Art &amp; Illustrations</p>
+  </div>
+
+  
+  <section class="section fade" id="cg">
+    <h2 class="section-title">CG Gallery</h2>
+    <p class="section-sub">Key Visuals &amp; Event Scenes</p>
+
+    <div class="carousel-outer">
+      <button class="carousel-btn btn-prev" onclick="moveSlide(-1)">&#8249;</button>
+      <div class="carousel-clip">
+        <div class="carousel-track" id="ctrack">
+
+          <div class="carousel-slide">
+            <img src="assets/images/intro.png" alt="The First Twilight" style="width:100%; aspect-ratio:16/9; object-fit:cover; display:block;" />
+            <div class="slide-caption">
+              <strong>The First Twilight</strong>
+              <span>Prologue &mdash; Key Visual</span>
+            </div>
+          </div>
+
+          <div class="carousel-slide">
+            <img src="assets/images/scene2.png" alt="Emma's Awakening" style="width:100%; aspect-ratio:16/9; object-fit:cover; display:block;" />
+            <div class="slide-caption">
+              <strong>Emma's Awakening</strong>
+              <span>Chapter I &mdash; CG Scene</span>
+            </div>
+          </div>
+
+          <div class="carousel-slide">
+            <img src="assets/images/trial.png" alt="The Trial of the Witches" style="width:100%; aspect-ratio:16/9; object-fit:cover; display:block;" />
+            <div class="slide-caption">
+              <strong>The Trial of the Witches</strong>
+              <span>Chapter III &mdash; Event CG</span>
+            </div>
+          </div>
+
+          <div class="carousel-slide">
+            <img src="assets/images/ending.png" alt="The Last Page" style="width:100%; aspect-ratio:16/9; object-fit:cover; display:block;" />
+            <div class="slide-caption">
+              <strong>The Last Page</strong>
+              <span>Chapter IV &mdash; Ending</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <button class="carousel-btn btn-next" onclick="moveSlide(1)">&#8250;</button>
+    </div>
+    <div class="carousel-dots" id="cdots"></div>
+  </section>
+
+  
+  <section class="section fade">
+    <h2 class="section-title">Character Art</h2>
+    <p class="section-sub">Click an image to enlarge</p>
+
+    <div class="gallery-grid">
+
+      <div class="gallery-item" onclick="openLightbox('assets/images/sakuraba.png', 'Emma Sakuraba')">
+        <img src="assets/images/sakuraba.png" alt="Emma Sakuraba" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+        <div class="placeholder" style="display:none;">[ Emma Sakuraba ]</div>
+        <div class="gallery-item-label"><strong>Emma Sakuraba</strong><span>Protagonist</span></div>
+      </div>
+
+      <div class="gallery-item" onclick="openLightbox('assets/images/arisa.png', 'Arisa Shifuji')">
+        <img src="assets/images/arisa.png" alt="Arisa Shifuji" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+        <div class="placeholder" style="display:none;">[ Arisa Shifuji ]</div>
+        <div class="gallery-item-label"><strong>Arisa Shifuji</strong><span>Antagonist</span></div>
+      </div>
+
+      <div class="gallery-item" onclick="openLightbox('assets/images/nanoka.png', 'Nanoka Kurobe')">
+        <img src="assets/images/nanoka.png" alt="Nanoka Kurobe" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+        <div class="placeholder" style="display:none;">[ Nanoka Kurobe ]</div>
+        <div class="gallery-item-label"><strong>Nanoka Kurobe</strong><span>Neutral</span></div>
+      </div>
+
+      <div class="gallery-item" onclick="openLightbox('assets/images/leia.png', 'Leia Hasumi')">
+        <img src="assets/images/leia.png" alt="Leia Hasumi" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+        <div class="placeholder" style="display:none;">[ Leia Hasumi ]</div>
+        <div class="gallery-item-label"><strong>Leia Hasumi</strong><span>Ally</span></div>
+      </div>
+
+      <div class="gallery-item" onclick="openLightbox('assets/images/coco.png', 'Coco Sawatori')">
+        <img src="assets/images/coco.png" alt="Coco Sawatori" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+        <div class="placeholder" style="display:none;">[ Coco Sawatori ]</div>
+        <div class="gallery-item-label"><strong>Coco Sawatori</strong><span>Ally</span></div>
+      </div>
+
+      <div class="gallery-item" onclick="openLightbox('assets/images/hiro.png', 'Hiro Nikaido')">
+        <img src="assets/images/hiro.png" alt="Hiro Nikaido" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+        <div class="placeholder" style="display:none;">[ Hiro Nikaido ]</div>
+        <div class="gallery-item-label"><strong>Hiro Nikaido</strong><span>Ally</span></div>
+      </div>
+
+    </div>
+  </section>
+
+  
+  <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+    <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+    <img id="lightbox-img" src="" alt="" />
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Die Letzte Seite Wiki</p>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="mailto:jezekielbolofer09@gmail.com" target="_blank">Contact</a></li>
+    </ul>
+  </footer><script src="script.js"></script>

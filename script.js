@@ -1,88 +1,56 @@
-// Carousel functionality
-const track = document.getElementById('ctrack');
-const dotsContainer = document.getElementById('cdots');
-let cur = 0;
-let total = track ? track.children.length : 0;
-let visibleSlides = getVisibleSlides(); // Determine based on screen width
-let max = Math.max(0, total - visibleSlides);
+var track = document.getElementById('ctrack');
+var dotsContainer = document.getElementById('cdots');
+var cur = 0;
+var total = track ? track.children.length : 0;
+var visible = window.innerWidth <= 768 ? 1 : 2;
+var max = Math.max(0, total - visible);
 
-// Function to determine number of visible slides based on screen width
-function getVisibleSlides() {
-  return window.innerWidth <= 768 ? 1 : 2; // Mobile: 1 slide, Desktop: 2 slides
-}
-
-// Function to create/update dots dynamically
 function updateDots() {
   if (!dotsContainer) return;
-  
-  const dotCount = visibleSlides === 1 ? total : max + 1;
-  
-  // Clear existing dots
   dotsContainer.innerHTML = '';
-  
-  // Create new dots
-  for (let i = 0; i < dotCount; i++) {
-    const dot = document.createElement('div');
-    dot.className = `cdot ${i === cur ? 'active' : ''}`;
-    dot.setAttribute('onclick', `goSlide(${i})`);
+  var count = visible === 1 ? total : max + 1;
+  for (var i = 0; i < count; i++) {
+    var dot = document.createElement('div');
+    dot.className = i === cur ? 'cdot active' : 'cdot';
+    dot.setAttribute('onclick', 'goSlide(' + i + ')');
     dotsContainer.appendChild(dot);
   }
 }
 
-// Initialize or reinitialize carousel on resize
 function initCarousel() {
   if (!track) return;
-  
   total = track.children.length;
-  const newVisibleSlides = getVisibleSlides();
-  const newMax = Math.max(0, total - newVisibleSlides);
-  
-  // Adjust current index if it exceeds new max
-  if (cur > newMax) {
-    cur = newMax;
-  }
-  
-  visibleSlides = newVisibleSlides;
-  max = newMax;
-  
+  visible = window.innerWidth <= 768 ? 1 : 2;
+  max = Math.max(0, total - visible);
+  if (cur > max) cur = max;
   updateDots();
   render();
 }
 
 function render() {
   if (!track || !track.children.length) return;
-  
-  const slideWidth = track.children[0].offsetWidth;
-  const gap = 12; // Matches the gap in CSS
-  const moveDistance = cur * (slideWidth + gap);
-  
-  track.style.transform = `translateX(-${moveDistance}px)`;
-  
-  // Update dots active state
-  const dots = document.querySelectorAll('.cdot');
-  dots.forEach((d, i) => {
-    d.classList.toggle('active', i === cur);
-  });
-  
-  // Disable buttons at limits for better UX
-  const prevBtn = document.querySelector('.btn-prev');
-  const nextBtn = document.querySelector('.btn-next');
-  
-  if (prevBtn) {
-    prevBtn.style.opacity = cur === 0 ? '0.5' : '1';
-    prevBtn.style.pointerEvents = cur === 0 ? 'none' : 'auto';
+  var w = track.children[0].offsetWidth + 12;
+  track.style.transform = 'translateX(-' + (cur * w) + 'px)';
+  var dots = document.querySelectorAll('.cdot');
+  for (var i = 0; i < dots.length; i++) {
+    dots[i].classList.toggle('active', i === cur);
   }
-  
-  if (nextBtn) {
-    nextBtn.style.opacity = cur >= max ? '0.5' : '1';
-    nextBtn.style.pointerEvents = cur >= max ? 'none' : 'auto';
+  var prev = document.querySelector('.btn-prev');
+  var next = document.querySelector('.btn-next');
+  if (prev) {
+    prev.style.opacity = cur === 0 ? '0.5' : '1';
+    prev.style.pointerEvents = cur === 0 ? 'none' : 'auto';
+  }
+  if (next) {
+    next.style.opacity = cur >= max ? '0.5' : '1';
+    next.style.pointerEvents = cur >= max ? 'none' : 'auto';
   }
 }
 
 function moveSlide(dir) {
-  const newPos = cur + dir;
-  if (newPos >= 0 && newPos <= max) {
-    cur = newPos;
+  var n = cur + dir;
+  if (n >= 0 && n <= max) {
+    cur = n;
     render();
   }
 }
@@ -94,32 +62,83 @@ function goSlide(i) {
   }
 }
 
-// Debounced resize handler for better performance
-let resizeTimeout;
-window.addEventListener('resize', () => {
-  clearTimeout(resizeTimeout);
-  resizeTimeout = setTimeout(() => {
-    initCarousel();
-  }, 150);
+var resizeTimer;
+window.addEventListener('resize', function() {
+  clearTimeout(resizeTimer);
+  resizeTimer = setTimeout(initCarousel, 150);
 });
 
-// Intersection Observer for fade-in effects
-const faders = document.querySelectorAll(".fade");
+var faders = document.querySelectorAll('.fade');
 
-const appear = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add("show");
+function showFade() {
+  for (var i = 0; i < faders.length; i++) {
+    var r = faders[i].getBoundingClientRect();
+    if (r.top < window.innerHeight + 50 && r.bottom > 0) {
+      faders[i].classList.add('show');
     }
-  });
-}, { threshold: 0.15 });
+  }
+}
 
-faders.forEach(el => appear.observe(el));
+showFade();
+window.addEventListener('scroll', showFade);
 
-// Initialize carousel when DOM is loaded
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', function() {
   initCarousel();
-  
-  // Also render after images load (to get correct widths)
   window.addEventListener('load', render);
+
+  var stars = document.querySelectorAll('.star');
+  if (stars.length > 0) {
+    var ratings = [];
+    var voted = false;
+
+    for (var i = 0; i < stars.length; i++) {
+      (function(idx) {
+        stars[idx].addEventListener('mouseover', function() {
+          if (voted) return;
+          for (var j = 0; j < stars.length; j++) {
+            stars[j].classList.toggle('active', j <= idx);
+          }
+        });
+        stars[idx].addEventListener('mouseout', function() {
+          if (voted) return;
+          for (var j = 0; j < stars.length; j++) {
+            stars[j].classList.remove('active');
+          }
+        });
+      })(i);
+    }
+
+    window.rate = function(val) {
+      if (voted) return;
+      voted = true;
+      ratings.push(val);
+      for (var i = 0; i < stars.length; i++) {
+        stars[i].classList.toggle('active', i < val);
+      }
+      var sum = 0;
+      for (var i = 0; i < ratings.length; i++) sum += ratings[i];
+      var avg = (sum / ratings.length).toFixed(1);
+      if (document.getElementById('ratingScore')) document.getElementById('ratingScore').textContent = avg;
+      if (document.getElementById('ratingCount')) document.getElementById('ratingCount').textContent = ratings.length + ' rating' + (ratings.length !== 1 ? 's' : '');
+      if (document.getElementById('ratingMsg')) document.getElementById('ratingMsg').style.display = 'block';
+    };
+  }
+});
+
+function openLightbox(src, alt) {
+  var img = document.getElementById('lightbox-img');
+  var lb = document.getElementById('lightbox');
+  if (!img || !lb) return;
+  img.src = src;
+  img.alt = alt;
+  lb.classList.add('open');
+}
+
+function closeLightbox() {
+  var lb = document.getElementById('lightbox');
+  if (lb) lb.classList.remove('open');
+}
+
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') closeLightbox();
 });
