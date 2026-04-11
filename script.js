@@ -81,7 +81,8 @@ revealHash();
 
 document.addEventListener('DOMContentLoaded', () => {
   init();
-  
+  window.addEventListener('load', init);
+
   const stars = document.querySelectorAll('.star');
   let voted = false;
   let ratings = [];

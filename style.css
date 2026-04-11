@@ -1158,7 +1158,7 @@ body.center-all .controls-table {
    ========================================= */
 .back-to-top {
   position: fixed;
-  bottom: 30px;
+  bottom: 90px;
   right: 30px;
   z-index: 99;
   font-size: 20px;
@@ -1185,4 +1185,22 @@ body.center-all .controls-table {
   background-color: #c8a96e;
   color: #111;
   transform: translateY(-3px);
+}
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  border: 3px solid rgba(201, 168, 76, 0.55);
+  box-shadow:
+    0 0 8px 1px rgba(201, 168, 76, 0.25),
+    0 0 18px 3px rgba(184, 134, 11, 0.15),
+    inset 0 0 8px 1px rgba(201, 168, 76, 0.25),
+    inset 0 0 18px 3px rgba(184, 134, 11, 0.15);
+  pointer-events: none;
+  z-index: 9999;
+}
+
+.bento {
+  grid-template-rows: unset;
+  grid-auto-rows: 180px;
 }
