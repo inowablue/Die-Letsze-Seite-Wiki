@@ -15,11 +15,31 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400&family=EB+Garamond:ital,wght@0,400;1,400&family=Special+Elite&display=swap" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <style>
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      border: 3px solid rgba(201, 168, 76, 0.55);
+      box-shadow:
+        0 0 8px 1px rgba(201, 168, 76, 0.25),
+        0 0 18px 3px rgba(184, 134, 11, 0.15),
+        inset 0 0 8px 1px rgba(201, 168, 76, 0.25),
+        inset 0 0 18px 3px rgba(184, 134, 11, 0.15);
+      pointer-events: none;
+      z-index: 9999;
+    }
+  </style>
 </head>
 <body>
 
   <nav class="navbar">
-    <h1><a href="index.html" style="text-decoration:none; color:inherit;">Die Letzte Seite</a></h1>
+    <h1 style="display:flex; align-items:center; gap:10px;">
+  <img src="assets/images/logo.png" alt="Logo" style="height:40px; width:auto;height: 2.2rem;">
+  <a href="index.html" style="text-decoration:none; color:inherit;">
+    Die Letzte Seite
+  </a>
+</h1>
     <ul>
       <li><a href="index.html" class="nav-active">Home</a></li>
       <li><a href="characters.html">Characters</a></li>
@@ -206,6 +226,70 @@
         </div>
       </a>
 
+      <a class="bento-cell" href="characters.html#miria">
+        <img src="assets/images/miria.png" alt="Miria" style="width:100%; height:100%; object-fit:cover;" />
+        <div class="bento-tag">
+          <strong>Miria</strong>
+          <span>Ally</span>
+        </div>
+      </a>
+
+      <a class="bento-cell" href="characters.html#margo">
+        <img src="assets/images/margo.png" alt="Margo" style="width:100%; height:100%; object-fit:cover;" />
+        <div class="bento-tag">
+          <strong>Margo</strong>
+          <span>Ally</span>
+        </div>
+      </a>
+
+      <a class="bento-cell tall" href="characters.html#meruru">
+        <img src="assets/images/meruru.png" alt="Meruru" style="width:100%; height:100%; object-fit:cover;" />
+        <div class="bento-tag">
+          <strong>Meruru</strong>
+          <span>Protagonist</span>
+        </div>
+      </a>
+
+      <a class="bento-cell" href="characters.html#natsume">
+        <img src="assets/images/natsume.png" alt="Natsume" style="width:100%; height:100%; object-fit:cover;" />
+        <div class="bento-tag">
+          <strong>Natsume</strong>
+          <span>Ally</span>
+        </div>
+      </a>
+
+      <a class="bento-cell" href="characters.html#noah">
+        <img src="assets/images/noah.png" alt="Noah" style="width:100%; height:100%; object-fit:cover;" />
+        <div class="bento-tag">
+          <strong>Noah</strong>
+          <span>Ally</span>
+        </div>
+      </a>
+
+      <a class="bento-cell" href="characters.html#hanna">
+        <img src="assets/images/hanna.png" alt="Hanna" style="width:100%; height:100%; object-fit:cover;" />
+        <div class="bento-tag">
+          <strong>Hanna</strong>
+          <span>Ally</span>
+        </div>
+      </a>
+
+      <a class="bento-cell" href="characters.html#sherry">
+        <img src="assets/images/sherry.png" alt="Sherry" style="width:100%; height:100%; object-fit:cover;" />
+        <div class="bento-tag">
+          <strong>Sherry</strong>
+          <span>Ally</span>
+        </div>
+      </a>
+
+      <a class="bento-cell" href="characters.html#tsukishiro">
+        <img src="assets/images/tsukihiro.png" alt="Tsukishiro" style="width:100%; height:100%; object-fit:cover;" />
+        <div class="bento-tag">
+          <strong>Tsukishiro</strong>
+          <span>Antagonist</span>
+        </div>
+      </a>
+
     </div>
   </section>
 
@@ -256,9 +340,7 @@
     <ul>
       <li><a href="index.html">Home</a></li>
       <li><a href="#">About</a></li>
-      <li><a href="mailto:jezekielbolofer09@gmail.com" target="_blank">Contact</a></li>
+      <li><a href="/cdn-cgi/l/email-protection#fc96998699979599909e9390939a998eccc5bc9b919d9590d29f9391" target="_blank">Contact</a></li>
     </ul>
   </footer>
-  <script src="script.js"></script>
-</body>
-</html>
+  <

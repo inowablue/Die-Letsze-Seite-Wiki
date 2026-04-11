@@ -67,8 +67,17 @@ function showFade() {
   });
 }
 
+function revealHash() {
+  if (!window.location.hash) return;
+  const target = document.querySelector(window.location.hash);
+  if (!target) return;
+  target.querySelectorAll('.fade').forEach(el => el.classList.add('show'));
+  if (target.classList.contains('fade')) target.classList.add('show');
+}
+
 window.addEventListener('scroll', showFade);
 showFade();
+revealHash();
 
 document.addEventListener('DOMContentLoaded', () => {
   init();

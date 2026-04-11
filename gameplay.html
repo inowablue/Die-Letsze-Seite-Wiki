@@ -14,11 +14,31 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400&family=EB+Garamond:ital,wght@0,400;1,400&family=Special+Elite&display=swap" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <style>
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      border: 3px solid rgba(201, 168, 76, 0.55);
+      box-shadow:
+        0 0 8px 1px rgba(201, 168, 76, 0.25),
+        0 0 18px 3px rgba(184, 134, 11, 0.15),
+        inset 0 0 8px 1px rgba(201, 168, 76, 0.25),
+        inset 0 0 18px 3px rgba(184, 134, 11, 0.15);
+      pointer-events: none;
+      z-index: 9999;
+    }
+  </style>
 </head>
 <body class="center-all">
 
   <nav class="navbar">
-    <h1><a href="index.html" style="text-decoration:none; color:inherit;">Die Letzte Seite</a></h1>
+    <h1 style="display:flex; align-items:center; gap:10px;">
+  <img src="assets/images/logo.png" alt="Logo" style="height:40px; width:auto;height: 2.2rem;">
+  <a href="index.html" style="text-decoration:none; color:inherit;">
+    Die Letzte Seite
+  </a>
+</h1>
     <ul>
       <li><a href="index.html">Home</a></li>
       <li><a href="characters.html">Characters</a></li>
@@ -44,14 +64,29 @@
       </p>
     </div>
 
-    <div class="gameplay-subsection">
-      <h3 class="gameplay-sub-title">Adventure</h3>
-      <p class="section-sub">Exploration &amp; Investigation</p>
-      <div class="gameplay-desc">
-        <div class="gallery-item" onclick="openLightbox('assets/images/gameplay1.png', 'Gameplay')">
-        <img src="assets/images/gameplay1.png" alt="Gameplay" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
-        <div class="placeholder" style="display:none;">[ Gameplay ]</div>
-      </div>
+   <div class="gameplay-subsection">
+  <h3 class="gameplay-sub-title">Adventure</h3>
+  <p class="section-sub">Exploration &amp; Investigation</p>
+
+  <div class="gameplay-desc">
+
+    <div class="gallery-item" onclick="openLightbox('assets/images/gameplay1.png', 'Gameplay')">
+      <img src="assets/images/gameplay1.png" alt="Gameplay" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+      <div class="placeholder" style="display:none;">[ Gameplay ]</div>
+    </div>
+
+    <div class="gallery-item" onclick="openLightbox('assets/images/gameplay1b.png', 'Gameplay 2')">
+      <img src="assets/images/gameplay_n1.png" alt="Gameplay 2" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+      <div class="placeholder" style="display:none;">[ Gameplay 2 ]</div>
+    </div>
+
+    <div class="gallery-item" onclick="openLightbox('assets/images/gameplay1c.png', 'Gameplay 3')">
+      <img src="assets/images/gameplay5.jpg" alt="Gameplay 3" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+      <div class="placeholder" style="display:none;">[ Gameplay 3 ]</div>
+    </div>
+
+  </div>
+</div>
         <p>
           The player explores the prison mansion where they and the other twelve magical girls are confined.
           Through conversations and repeated investigations, the player can learn the backstories of the girls,
@@ -65,12 +100,28 @@
     </div>
 
     <div class="gameplay-subsection">
-      <h3 class="gameplay-sub-title">Witch Trial</h3>
-      <p class="section-sub">Investigation &amp; Conviction</p>
-      <div class="gameplay-desc">
-        <div class="gallery-item" onclick="openLightbox('assets/images/gameplay3.png', 'Gameplay2')">
-        <img src="assets/images/gameplay3.png" alt="Gameplay2" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
-      </div>
+  <h3 class="gameplay-sub-title">Witch Trial</h3>
+  <p class="section-sub">Investigation &amp; Conviction</p>
+
+  <div class="gameplay-desc">
+
+    <div class="gallery-item" onclick="openLightbox('assets/images/gameplay3.png', 'Gameplay2')">
+      <img src="assets/images/gameplay3.png" alt="Gameplay2" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+      <div class="placeholder" style="display:none;">[ Gameplay ]</div>
+    </div>
+
+    <div class="gallery-item" onclick="openLightbox('assets/images/gameplay3b.png', 'Gameplay 2')">
+      <img src="assets/images/gameplay4.png" alt="Gameplay 2" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+      <div class="placeholder" style="display:none;">[ Gameplay 2 ]</div>
+    </div>
+
+    <div class="gallery-item" onclick="openLightbox('assets/images/gameplay3c.png', 'Gameplay 3')">
+      <img src="assets/images/gameplay_n2.png" alt="Gameplay 3" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+      <div class="placeholder" style="display:none;">[ Gameplay 3 ]</div>
+    </div>
+
+  </div>
+</div>
         <p>
           Every so often, a murder will occur amongst the characters. These lead directly into witch trials,
           where the player must uncover the witch responsible. They can review previous statements and evidence
@@ -90,119 +141,98 @@
     <h2 class="section-title">Basic Controls</h2>
     <p class="section-sub">Keyboard &amp; Mouse</p>
 
-    <table class="controls-table">
-      <thead>
-        <tr>
-          <th>Key / Input</th>
-          <th>Icon / Preview</th>
-          <th>Action</th>
-          <th>Description</th>
-        </tr>
+    <table class="controls-table"> 
+      <thead> 
+        <tr> 
+          <th>Key / Input</th> 
+          <th>Icon / Preview</th> 
+          <th>Action</th> <th>Description</th> 
+        </tr> 
       </thead>
-      <tbody>
-        <tr>
-          <td><span class="key-badge">Enter</span> / <span class="key-badge">Space</span></td>
-          <td class="ctrl-icon"><div class="icon-placeholder">img / gif</div></td>
-          <td>Advance</td>
-          <td>Advance to the next line of dialogue or scene.</td>
-        </tr>
-        <tr>
-          <td><span class="key-badge">Esc</span></td>
-          <td class="ctrl-icon"><div class="icon-placeholder">img / gif</div></td>
-          <td>Menu</td>
-          <td>Open the main menu or pause the game.</td>
-        </tr>
-        <tr>
-          <td><span class="key-badge">Ctrl</span></td>
-          <td class="ctrl-icon"><div class="icon-placeholder">img / gif</div></td>
-          <td>Skip</td>
-          <td>Hold to fast-skip through already read text.</td>
-        </tr>
-        <tr>
-          <td><span class="key-badge">A</span></td>
-          <td class="ctrl-icon"><div class="icon-placeholder">img / gif</div></td>
-          <td>Auto Mode</td>
-          <td>Toggle auto-advance — text moves forward automatically.</td>
-        </tr>
-        <tr>
-          <td><span class="key-badge">S</span></td>
-          <td class="ctrl-icon"><div class="icon-placeholder">img / gif</div></td>
-          <td>Save</td>
-          <td>Open the save menu to save your progress.</td>
-        </tr>
-        <tr>
-          <td><span class="key-badge">L</span></td>
-          <td class="ctrl-icon"><div class="icon-placeholder">img / gif</div></td>
-          <td>Load</td>
-          <td>Open the load menu to load a previous save.</td>
-        </tr>
-        <tr>
-          <td><span class="key-badge">Left Click</span></td>
-          <td class="ctrl-icon"><div class="icon-placeholder">img / gif</div></td>
-          <td>Select / Advance</td>
-          <td>Click to advance dialogue or select a choice.</td>
-        </tr>
-        <tr>
-          <td><span class="key-badge">Right Click</span></td>
-          <td class="ctrl-icon"><div class="icon-placeholder">img / gif</div></td>
-          <td>Hide UI</td>
-          <td>Hide the text box to view the scene fully.</td>
-        </tr>
-        <tr>
-          <td><span class="key-badge">Scroll Up</span></td>
-          <td class="ctrl-icon"><div class="icon-placeholder">img / gif</div></td>
-          <td>Backlog</td>
-          <td>Scroll up to view previously read dialogue.</td>
-        </tr>
-      </tbody>
-    </table>
-  </section>
+    <tbody>
 
-  
-  <section class="section fade">
-    <h2 class="section-title">Special Controls</h2>
-    <p class="section-sub">Magic &amp; Event Inputs</p>
+<tr>
+  <td><span class="key-badge">Enter</span> / <span class="key-badge">Space</span></td>
+  <td class="ctrl-icon">
+    <img src="assets/images/e.png" alt="Enter / Space">
+  </td>
+  <td>Advance</td>
+  <td>Advance to the next line of dialogue or scene.</td>
+</tr>
 
-    <table class="controls-table">
-      <thead>
-        <tr>
-          <th>Key / Input</th>
-          <th>Icon / Preview</th>
-          <th>Action</th>
-          <th>Description</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><span class="key-badge">[ Key ]</span></td>
-          <td class="ctrl-icon"><div class="icon-placeholder">img / gif</div></td>
-          <td>[ Action ]</td>
-          <td>[ Description of this special control. ]</td>
-        </tr>
-        <tr>
-          <td><span class="key-badge">[ Key ]</span></td>
-          <td class="ctrl-icon"><div class="icon-placeholder">img / gif</div></td>
-          <td>[ Action ]</td>
-          <td>[ Description of this special control. ]</td>
-        </tr>
-        <tr>
-          <td><span class="key-badge">[ Key ]</span></td>
-          <td class="ctrl-icon"><div class="icon-placeholder">img / gif</div></td>
-          <td>[ Action ]</td>
-          <td>[ Description of this special control. ]</td>
-        </tr>
-      </tbody>
-    </table>
-  </section>
+<tr>
+  <td><span class="key-badge">Esc</span></td>
+  <td class="ctrl-icon">
+    <img src="assets/images/es.png" alt="Escape">
+  </td>
+  <td>Menu</td>
+  <td>Open the main menu or pause the game.</td>
+</tr>
 
-  <footer>
-    <p>&copy; 2025 Die Letzte Seite Wiki</p>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="#">About</a></li>
-      <li><a href="mailto:jezekielbolofer09@gmail.com" target="_blank">Contact</a></li>
-    </ul>
-  </footer>
-  <script src="script.js"></script>
-</body>
-</html>
+<tr>
+  <td><span class="key-badge">Ctrl</span></td>
+  <td class="ctrl-icon">
+    <img src="assets/images/c.png" alt="Ctrl">
+  </td>
+  <td>Skip</td>
+  <td>Hold to fast-skip through already read text.</td>
+</tr>
+
+<tr>
+  <td><span class="key-badge">A</span></td>
+  <td class="ctrl-icon">
+    <img src="assets/images/a.png" alt="A key">
+  </td>
+  <td>Auto Mode</td>
+  <td>Toggle auto-advance — text moves forward automatically.</td>
+</tr>
+
+<tr>
+  <td><span class="key-badge">S</span></td>
+  <td class="ctrl-icon">
+    <img src="assets/images/s.png" alt="S key">
+  </td>
+  <td>Save</td>
+  <td>Open the save menu to save your progress.</td>
+</tr>
+
+<tr>
+  <td><span class="key-badge">L</span></td>
+  <td class="ctrl-icon">
+    <img src="assets/images/l.png" alt="L key">
+  </td>
+  <td>Load</td>
+  <td>Open the load menu to load a previous save.</td>
+</tr>
+
+<tr>
+  <td><span class="key-badge">Left Click</span></td>
+  <td class="ctrl-icon">
+    <img src="assets/images/left.png" alt="Left Click">
+  </td>
+  <td>Select / Advance</td>
+  <td>Click to advance dialogue or select a choice.</td>
+</tr>
+
+<tr>
+  <td><span class="key-badge">Right Click</span></td>
+  <td class="ctrl-icon">
+    <img src="assets/images/r.png" alt="Right Click">
+  </td>
+  <td>Hide UI</td>
+  <td>Hide the text box to view the scene fully.</td>
+</tr>
+
+<tr>
+  <td><span class="key-badge">Scroll Up</span></td>
+  <td class="ctrl-icon">
+    <img src="assets/images/ss.png" alt="Scroll Up">
+  </td>
+  <td>Backlog</td>
+  <td>Scroll up to view previously read dialogue.</td>
+</tr>
+
+</tbody>
+</table>
+
+<

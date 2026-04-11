@@ -14,11 +14,31 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400&family=EB+Garamond:ital,wght@0,400;1,400&family=Special+Elite&display=swap" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <style>
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      border: 3px solid rgba(201, 168, 76, 0.55);
+      box-shadow:
+        0 0 8px 1px rgba(201, 168, 76, 0.25),
+        0 0 18px 3px rgba(184, 134, 11, 0.15),
+        inset 0 0 8px 1px rgba(201, 168, 76, 0.25),
+        inset 0 0 18px 3px rgba(184, 134, 11, 0.15);
+      pointer-events: none;
+      z-index: 9999;
+    }
+  </style>
 </head>
 <body>
 
   <nav class="navbar">
-    <h1><a href="index.html" style="text-decoration:none; color:inherit;">Die Letzte Seite</a></h1>
+    <h1 style="display:flex; align-items:center; gap:10px;">
+  <img src="assets/images/logo.png" alt="Logo" style="height:40px; width:auto;height: 2.2rem;">
+  <a href="index.html" style="text-decoration:none; color:inherit;">
+    Die Letzte Seite
+  </a>
+</h1>
     <ul>
       <li><a href="index.html">Home</a></li>
       <li><a href="characters.html">Characters</a></li>
@@ -43,7 +63,7 @@
       <div class="carousel-clip">
         <div class="carousel-track" id="ctrack">
 
-          <div class="carousel-slide">
+          <div class="carousel-slide" onclick="openLightbox('assets/images/intro.png', 'The First Twilight')" style="cursor:pointer;">
             <img src="assets/images/intro.png" alt="The First Twilight" style="width:100%; aspect-ratio:16/9; object-fit:cover; display:block;" />
             <div class="slide-caption">
               <strong>The First Twilight</strong>
@@ -51,7 +71,7 @@
             </div>
           </div>
 
-          <div class="carousel-slide">
+          <div class="carousel-slide" onclick="openLightbox('assets/images/scene2.png', 'Emma\'s Awakening')" style="cursor:pointer;">
             <img src="assets/images/scene2.png" alt="Emma's Awakening" style="width:100%; aspect-ratio:16/9; object-fit:cover; display:block;" />
             <div class="slide-caption">
               <strong>Emma's Awakening</strong>
@@ -59,7 +79,7 @@
             </div>
           </div>
 
-          <div class="carousel-slide">
+          <div class="carousel-slide" onclick="openLightbox('assets/images/trial.png', 'The Trial of the Witches')" style="cursor:pointer;">
             <img src="assets/images/trial.png" alt="The Trial of the Witches" style="width:100%; aspect-ratio:16/9; object-fit:cover; display:block;" />
             <div class="slide-caption">
               <strong>The Trial of the Witches</strong>
@@ -67,7 +87,7 @@
             </div>
           </div>
 
-          <div class="carousel-slide">
+          <div class="carousel-slide" onclick="openLightbox('assets/images/gameplay7.png', 'The Last Page')" style="cursor:pointer;">
             <img src="assets/images/gameplay7.png" alt="The Last Page" style="width:100%; aspect-ratio:16/9; object-fit:cover; display:block;" />
             <div class="slide-caption">
               <strong>The Last Page</strong>
@@ -75,6 +95,7 @@
             </div>
           </div>
 
+        
         </div>
       </div>
       <button class="carousel-btn btn-next" onclick="moveSlide(1)">&#8250;</button>
@@ -176,7 +197,119 @@
     </div>
   </section>
 
-  
+
+  <!-- ═══════════════════════════════════════════
+       SCENES & SCREENSHOTS — 12-image grid
+  ════════════════════════════════════════════ -->
+  <section class="section fade" id="scenes">
+    <h2 class="section-title">Scenes &amp; Screenshots</h2>
+    <p class="section-sub">Click an image to enlarge</p>
+
+    <div class="gallery-grid">
+
+      <!-- Slot 1 -->
+      <div class="gallery-item" onclick="openLightbox('assets/images/cg1.png', 'Cg1')">
+        <img src="assets/images/cg1.png" alt="Scene 1"
+             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+        <div class="placeholder" style="display:none;">[ Scene 1 ]</div>
+        <div class="gallery-item-label"><strong>Cg1</strong><span>Natsume An-An</span></div>
+      </div>
+
+      <!-- Slot 2 -->
+      <div class="gallery-item" onclick="openLightbox('assets/images/cg2.png', 'Cg2')">
+        <img src="assets/images/cg2.png" alt="Scene 2"
+             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+        <div class="placeholder" style="display:none;">[ Scene 2 ]</div>
+        <div class="gallery-item-label"><strong>Cg2</strong><span>Jogasaki Noah</span></div>
+      </div>
+
+      <!-- Slot 3 -->
+      <div class="gallery-item" onclick="openLightbox('assets/images/cg3.png', 'Cg3')">
+        <img src="assets/images/cg3.png" alt="Scene 3"
+             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+        <div class="placeholder" style="display:none;">[ Scene 3 ]</div>
+        <div class="gallery-item-label"><strong>Cg3</strong><span>Sakuraba Ema</span></div>
+      </div>
+
+      <!-- Slot 4 -->
+      <div class="gallery-item" onclick="openLightbox('assets/images/cg4.png', 'Cg4')">
+        <img src="assets/images/cg4.png" alt="Scene 4"
+             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+        <div class="placeholder" style="display:none;">[ Scene 4 ]</div>
+        <div class="gallery-item-label"><strong>Cg4</strong><span>Nanoka Kurobe</span></div>
+      </div>
+
+      <!-- Slot 5 -->
+      <div class="gallery-item" onclick="openLightbox('assets/images/cg5.png', 'Cg5')">
+        <img src="assets/images/cg5.png" alt="Scene 5"
+             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+        <div class="placeholder" style="display:none;">[ Scene 5 ]</div>
+        <div class="gallery-item-label"><strong>Cg5</strong><span>Coco Sawatori</span></div>
+      </div>
+
+      <!-- Slot 6 -->
+      <div class="gallery-item" onclick="openLightbox('assets/images/cg6.png', 'Cg6')">
+        <img src="assets/images/cg6.png" alt="Scene 6"
+             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+        <div class="placeholder" style="display:none;">[ Scene 6 ]</div>
+        <div class="gallery-item-label"><strong>Cg6</strong><span>Meruru Hikami</span></div>
+      </div>
+
+      <!-- Slot 7 -->
+      <div class="gallery-item" onclick="openLightbox('assets/images/cg7.png', 'Cg7')">
+        <img src="assets/images/cg7.png" alt="Scene 7"
+             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+        <div class="placeholder" style="display:none;">[ Scene 7 ]</div>
+        <div class="gallery-item-label"><strong>Cg7</strong><span>Coco Sawatori</span></div>
+      </div>
+
+      <!-- Slot 8 -->
+      <div class="gallery-item" onclick="openLightbox('assets/images/cg8.png', 'Cg8')">
+        <img src="assets/images/cg8.png" alt="Scene 8"
+             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+        <div class="placeholder" style="display:none;">[ Scene 8 ]</div>
+        <div class="gallery-item-label"><strong>Cg8</strong><span>Margo Housho</span></div>
+      </div>
+
+      <!-- Slot 9 -->
+      <div class="gallery-item" onclick="openLightbox('assets/images/cg9.jpg', 'Cg9')">
+        <img src="assets/images/cg9.jpg" alt="Scene 9"
+             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+        <div class="placeholder" style="display:none;">[ Scene 9 ]</div>
+        <div class="gallery-item-label"><strong>Cg9</strong><span>Sherry and Hanna</span></div>
+      </div>
+
+      <!-- Slot 10 -->
+      <div class="gallery-item" onclick="openLightbox('assets/images/cg10.jpg', 'Cg10')">
+        <img src="assets/images/cg10.jpg" alt="Scene 10"
+             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+        <div class="placeholder" style="display:none;">[ Scene 10 ]</div>
+        <div class="gallery-item-label"><strong>Cg10</strong><span>Arisa Shifuji</span></div>
+      </div>
+
+      <!-- Slot 11 -->
+      <div class="gallery-item" onclick="openLightbox('assets/images/cg11.jpg', 'Cg11')">
+        <img src="assets/images/cg11.jpg" alt="Scene 11"
+             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+        <div class="placeholder" style="display:none;">[ Scene 11 ]</div>
+        <div class="gallery-item-label"><strong>Cg11</strong><span>Jogasaki Noah</span></div>
+      </div>
+
+      <!-- Slot 12 -->
+      <div class="gallery-item" onclick="openLightbox('assets/images/cg12.jpg', 'Cg12')">
+        <img src="assets/images/cg12.jpg" alt="Scene 12"
+             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+        <div class="placeholder" style="display:none;">[ Scene 12 ]</div>
+        <div class="gallery-item-label"><strong>Cg12</strong><span>Jogasaki Noah</span></div>
+      </div>
+
+    </div>
+  </section>
+
+
+  </div>
+
+  <!-- Lightbox -->
   <div class="lightbox" id="lightbox" onclick="closeLightbox()">
     <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
     <img id="lightbox-img" src="" alt="" />
@@ -187,9 +320,9 @@
     <ul>
       <li><a href="index.html">Home</a></li>
       <li><a href="#">About</a></li>
-      <li><a href="mailto:jezekielbolofer09@gmail.com" target="_blank">Contact</a></li>
+      <li><a href="/cdn-cgi/l/email-protection#78121d021d13111d141a1714171e1d0a4841381f15191114561b1715" target="_blank">Contact</a></li>
     </ul>
   </footer>
-  <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

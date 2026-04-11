@@ -8,11 +8,31 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400&family=EB+Garamond:ital,wght@0,400;1,400&family=Special+Elite&display=swap" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <style>
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      border: 3px solid rgba(201, 168, 76, 0.55);
+      box-shadow:
+        0 0 8px 1px rgba(201, 168, 76, 0.25),
+        0 0 18px 3px rgba(184, 134, 11, 0.15),
+        inset 0 0 8px 1px rgba(201, 168, 76, 0.25),
+        inset 0 0 18px 3px rgba(184, 134, 11, 0.15);
+      pointer-events: none;
+      z-index: 9999;
+    }
+  </style>
 </head>
 <body>
 
   <nav class="navbar">
-    <h1><a href="index.html" style="text-decoration:none; color:inherit;">Die Letzte Seite</a></h1>
+    <h1 style="display:flex; align-items:center; gap:10px;">
+  <img src="assets/images/logo.png" alt="Logo" style="height:40px; width:auto;height: 2.2rem;">
+  <a href="index.html" style="text-decoration:none; color:inherit;">
+    Die Letzte Seite
+  </a>
+</h1>
     <ul>
       <li><a href="index.html">Home</a></li>
       <li><a href="characters.html" class="nav-active">Characters</a></li>
@@ -77,29 +97,19 @@
         <div class="char-gallery-label">Expressions &amp; Skills</div>
         <div class="char-gallery-grid">
           <div class="char-gallery-item">
-            <img src="assets/images/emma_exp1.png" alt="Emma Normal" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
-            <div class="placeholder" style="display:none;">Normal</div>
-            <div class="char-gallery-item-label">Normal</div>
-          </div>
-          <div class="char-gallery-item">
-            <div class="placeholder">Happy</div>
+            <img src="assets/images/emh.png" alt="Happy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+            <div class="placeholder" style="display:none;">Happy</div>
             <div class="char-gallery-item-label">Happy</div>
           </div>
           <div class="char-gallery-item">
-            <div class="placeholder">Sad</div>
+            <img src="assets/images/ems.png" alt="Sad" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+            <div class="placeholder" style="display:none;">Sad</div>
             <div class="char-gallery-item-label">Sad</div>
           </div>
           <div class="char-gallery-item">
-            <div class="placeholder">Angry</div>
+            <img src="assets/images/ema.png" alt="Angry" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+            <div class="placeholder" style="display:none;">Angry</div>
             <div class="char-gallery-item-label">Angry</div>
-          </div>
-          <div class="char-gallery-item">
-            <div class="placeholder">Skill 01</div>
-            <div class="char-gallery-item-label">Skill 01</div>
-          </div>
-          <div class="char-gallery-item">
-            <div class="placeholder">Skill 02</div>
-            <div class="char-gallery-item-label">Skill 02</div>
           </div>
         </div>
       </div>
@@ -144,10 +154,21 @@
       <div class="char-gallery">
         <div class="char-gallery-label">Expressions &amp; Skills</div>
         <div class="char-gallery-grid">
-          <div class="char-gallery-item"><div class="placeholder">Normal</div><div class="char-gallery-item-label">Normal</div></div>
-          <div class="char-gallery-item"><div class="placeholder">Happy</div><div class="char-gallery-item-label">Happy</div></div>
-          <div class="char-gallery-item"><div class="placeholder">Angry</div><div class="char-gallery-item-label">Angry</div></div>
-          <div class="char-gallery-item"><div class="placeholder">Skill 01</div><div class="char-gallery-item-label">Skill 01</div></div>
+          <div class="char-gallery-item">
+            <img src="assets/images/arh.png" alt="Happy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+            <div class="placeholder" style="display:none;">Happy</div>
+            <div class="char-gallery-item-label">Happy</div>
+          </div>
+          <div class="char-gallery-item">
+            <img src="assets/images/ars.png" alt="Sad" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+            <div class="placeholder" style="display:none;">Sad</div>
+            <div class="char-gallery-item-label">Sad</div>
+          </div>
+          <div class="char-gallery-item">
+            <img src="assets/images/ara.png" alt="Angry" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+            <div class="placeholder" style="display:none;">Angry</div>
+            <div class="char-gallery-item-label">Angry</div>
+          </div>
         </div>
       </div>
     </div>
@@ -186,10 +207,21 @@
       <div class="char-gallery">
         <div class="char-gallery-label">Expressions &amp; Skills</div>
         <div class="char-gallery-grid">
-          <div class="char-gallery-item"><div class="placeholder">Normal</div><div class="char-gallery-item-label">Normal</div></div>
-          <div class="char-gallery-item"><div class="placeholder">Happy</div><div class="char-gallery-item-label">Happy</div></div>
-          <div class="char-gallery-item"><div class="placeholder">Angry</div><div class="char-gallery-item-label">Angry</div></div>
-          <div class="char-gallery-item"><div class="placeholder">Skill 01</div><div class="char-gallery-item-label">Skill 01</div></div>
+          <div class="char-gallery-item">
+            <img src="assets/images/nah.png" alt="Happy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+            <div class="placeholder" style="display:none;">Happy</div>
+            <div class="char-gallery-item-label">Happy</div>
+          </div>
+          <div class="char-gallery-item">
+            <img src="assets/images/nas.png" alt="Sad" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+            <div class="placeholder" style="display:none;">Sad</div>
+            <div class="char-gallery-item-label">Sad</div>
+          </div>
+          <div class="char-gallery-item">
+            <img src="assets/images/naa.png" alt="Angry" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+            <div class="placeholder" style="display:none;">Angry</div>
+            <div class="char-gallery-item-label">Angry</div>
+          </div>
         </div>
       </div>
     </div>
@@ -233,9 +265,21 @@
       <div class="char-gallery">
         <div class="char-gallery-label">Expressions &amp; Skills</div>
         <div class="char-gallery-grid">
-          <div class="char-gallery-item"><div class="placeholder">Normal</div><div class="char-gallery-item-label">Normal</div></div>
-          <div class="char-gallery-item"><div class="placeholder">Happy</div><div class="char-gallery-item-label">Happy</div></div>
-          <div class="char-gallery-item"><div class="placeholder">Skill 01</div><div class="char-gallery-item-label">Skill 01</div></div>
+          <div class="char-gallery-item">
+            <img src="assets/images/leh.png" alt="Happy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+            <div class="placeholder" style="display:none;">Happy</div>
+            <div class="char-gallery-item-label">Happy</div>
+          </div>
+          <div class="char-gallery-item">
+            <img src="assets/images/les.png" alt="Sad" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+            <div class="placeholder" style="display:none;">Sad</div>
+            <div class="char-gallery-item-label">Sad</div>
+          </div>
+          <div class="char-gallery-item">
+            <img src="assets/images/lea.png" alt="Angry" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+            <div class="placeholder" style="display:none;">Angry</div>
+            <div class="char-gallery-item-label">Angry</div>
+          </div>
         </div>
       </div>
     </div>
@@ -272,9 +316,21 @@
       <div class="char-gallery">
         <div class="char-gallery-label">Expressions &amp; Skills</div>
         <div class="char-gallery-grid">
-          <div class="char-gallery-item"><div class="placeholder">Normal</div><div class="char-gallery-item-label">Normal</div></div>
-          <div class="char-gallery-item"><div class="placeholder">Happy</div><div class="char-gallery-item-label">Happy</div></div>
-          <div class="char-gallery-item"><div class="placeholder">Skill 01</div><div class="char-gallery-item-label">Skill 01</div></div>
+          <div class="char-gallery-item">
+            <img src="assets/images/coh.png" alt="Happy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+            <div class="placeholder" style="display:none;">Happy</div>
+            <div class="char-gallery-item-label">Happy</div>
+          </div>
+          <div class="char-gallery-item">
+            <img src="assets/images/cos.png" alt="Sad" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+            <div class="placeholder" style="display:none;">Sad</div>
+            <div class="char-gallery-item-label">Sad</div>
+          </div>
+          <div class="char-gallery-item">
+            <img src="assets/images/coa.png" alt="Angry" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+            <div class="placeholder" style="display:none;">Angry</div>
+            <div class="char-gallery-item-label">Angry</div>
+          </div>
         </div>
       </div>
     </div>
@@ -311,18 +367,21 @@
       <div class="char-gallery">
         <div class="char-gallery-label">Expressions &amp; Skills</div>
         <div class="char-gallery-grid">
-          <div class="char-gallery-item"><div class="placeholder">Normal</div><div class="char-gallery-item-label">Normal</div></div>
-          <div class="char-gallery-item"><div class="placeholder">Happy</div><div class="char-gallery-item-label">Happy</div></div>
-          <div class="char-gallery-item"><div class="placeholder">Skill 01</div><div class="char-gallery-item-label">Skill 01</div></div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Margo -->
-    <div class="char-card fade">
-      <div class="char-top">
-        <div class="char-mugshot">
-          <img src="assets/images/margo.png" alt="Margo Housho" />
+          <div class="char-gallery-item">
+            <img src="assets/images/hih.png" alt="Happy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+            <div class="placeholder" style="display:none;">Happy</div>
+            <div class="char-gallery-item-label">Happy</div>
+          </div>
+          <div class="char-gallery-item">
+            <img src="assets/images/his.png" alt="Sad" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+            <div class="placeholder" style="display:none;">Sad</div>
+            <div class="char-gallery-item-label">Sad</div>
+          </div>
+          <div class="char-gallery-item">
+            <img src="assets/images/hia.png" alt="Angry" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+            <div class="placeholder" style="display:none;">Angry</div>
+            <div class="char-gallery-item-label">Angry</div>
+          </div>
         </div>
         <div class="char-bio">
           <div class="char-name">Margo Housho</div>
@@ -350,15 +409,27 @@
       <div class="char-gallery">
         <div class="char-gallery-label">Expressions &amp; Skills</div>
         <div class="char-gallery-grid">
-          <div class="char-gallery-item"><div class="placeholder">Normal</div><div class="char-gallery-item-label">Normal</div></div>
-          <div class="char-gallery-item"><div class="placeholder">Happy</div><div class="char-gallery-item-label">Happy</div></div>
-          <div class="char-gallery-item"><div class="placeholder">Skill 01</div><div class="char-gallery-item-label">Skill 01</div></div>
+          <div class="char-gallery-item">
+            <img src="assets/images/mah.png" alt="Happy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+            <div class="placeholder" style="display:none;">Happy</div>
+            <div class="char-gallery-item-label">Happy</div>
+          </div>
+          <div class="char-gallery-item">
+            <img src="assets/images/mas.png" alt="Sad" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+            <div class="placeholder" style="display:none;">Sad</div>
+            <div class="char-gallery-item-label">Sad</div>
+          </div>
+          <div class="char-gallery-item">
+            <img src="assets/images/maa.png" alt="Angry" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+            <div class="placeholder" style="display:none;">Angry</div>
+            <div class="char-gallery-item-label">Angry</div>
+          </div>
         </div>
       </div>
     </div>
 
     <!-- Hikami Meruru -->
-    <div class="char-card fade">
+    <div class="char-card fade" id="meruru">
       <div class="char-top">
         <div class="char-mugshot">
           <img src="assets/images/meruru.png" alt="Meruru Hikami" />
@@ -390,15 +461,27 @@
       <div class="char-gallery">
         <div class="char-gallery-label">Expressions &amp; Skills</div>
         <div class="char-gallery-grid">
-          <div class="char-gallery-item"><div class="placeholder">Normal</div><div class="char-gallery-item-label">Normal</div></div>
-          <div class="char-gallery-item"><div class="placeholder">Happy</div><div class="char-gallery-item-label">Happy</div></div>
-          <div class="char-gallery-item"><div class="placeholder">Skill 01</div><div class="char-gallery-item-label">Skill 01</div></div>
+          <div class="char-gallery-item">
+            <img src="assets/images/meh.png" alt="Happy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+            <div class="placeholder" style="display:none;">Happy</div>
+            <div class="char-gallery-item-label">Happy</div>
+          </div>
+          <div class="char-gallery-item">
+            <img src="assets/images/mes.png" alt="Sad" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+            <div class="placeholder" style="display:none;">Sad</div>
+            <div class="char-gallery-item-label">Sad</div>
+          </div>
+          <div class="char-gallery-item">
+            <img src="assets/images/mea.png" alt="Angry" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+            <div class="placeholder" style="display:none;">Angry</div>
+            <div class="char-gallery-item-label">Angry</div>
+          </div>
         </div>
       </div>
     </div>
 
     <!-- Jogasaki Noah -->
-    <div class="char-card fade">
+    <div class="char-card fade" id="noah">
       <div class="char-top">
         <div class="char-mugshot">
           <img src="assets/images/noah.png" alt="Jogasaki Noah" />
@@ -429,15 +512,27 @@
       <div class="char-gallery">
         <div class="char-gallery-label">Expressions &amp; Skills</div>
         <div class="char-gallery-grid">
-          <div class="char-gallery-item"><div class="placeholder">Normal</div><div class="char-gallery-item-label">Normal</div></div>
-          <div class="char-gallery-item"><div class="placeholder">Happy</div><div class="char-gallery-item-label">Happy</div></div>
-          <div class="char-gallery-item"><div class="placeholder">Skill 01</div><div class="char-gallery-item-label">Skill 01</div></div>
+          <div class="char-gallery-item">
+            <img src="assets/images/noh.png" alt="Happy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+            <div class="placeholder" style="display:none;">Happy</div>
+            <div class="char-gallery-item-label">Happy</div>
+          </div>
+          <div class="char-gallery-item">
+            <img src="assets/images/nos.png" alt="Sad" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+            <div class="placeholder" style="display:none;">Sad</div>
+            <div class="char-gallery-item-label">Sad</div>
+          </div>
+          <div class="char-gallery-item">
+            <img src="assets/images/noe.png" alt="Embarassed" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+            <div class="placeholder" style="display:none;">Embarassed</div>
+            <div class="char-gallery-item-label">Embarassed</div>
+          </div>
         </div>
       </div>
     </div>
 
     <!-- Natsume an-An -->
-    <div class="char-card fade">
+    <div class="char-card fade" id="natsume">
       <div class="char-top">
         <div class="char-mugshot">
           <img src="assets/images/natsume.png" alt="Natsume An-An" />
@@ -469,15 +564,27 @@
       <div class="char-gallery">
         <div class="char-gallery-label">Expressions &amp; Skills</div>
         <div class="char-gallery-grid">
-          <div class="char-gallery-item"><div class="placeholder">Normal</div><div class="char-gallery-item-label">Normal</div></div>
-          <div class="char-gallery-item"><div class="placeholder">Happy</div><div class="char-gallery-item-label">Happy</div></div>
-          <div class="char-gallery-item"><div class="placeholder">Skill 01</div><div class="char-gallery-item-label">Skill 01</div></div>
+          <div class="char-gallery-item">
+            <img src="assets/images/anh.png" alt="Happy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+            <div class="placeholder" style="display:none;">Happy</div>
+            <div class="char-gallery-item-label">Happy</div>
+          </div>
+          <div class="char-gallery-item">
+            <img src="assets/images/ana.png" alt="angry" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+            <div class="placeholder" style="display:none;">Sad</div>
+            <div class="char-gallery-item-label">Sad</div>
+          </div>
+          <div class="char-gallery-item">
+            <img src="assets/images/ane.png" alt="Embarassed" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+            <div class="placeholder" style="display:none;">Embarassed</div>
+            <div class="char-gallery-item-label">Embarassed</div>
+          </div>
         </div>
       </div>
     </div>
 
     <!-- Saeki Miria-->
-    <div class="char-card fade">
+    <div class="char-card fade" id="miria">
       <div class="char-top">
         <div class="char-mugshot">
           <img src="assets/images/miria.png" alt="Saeki Miria" />
@@ -508,15 +615,27 @@
       <div class="char-gallery">
         <div class="char-gallery-label">Expressions &amp; Skills</div>
         <div class="char-gallery-grid">
-          <div class="char-gallery-item"><div class="placeholder">Normal</div><div class="char-gallery-item-label">Normal</div></div>
-          <div class="char-gallery-item"><div class="placeholder">Happy</div><div class="char-gallery-item-label">Happy</div></div>
-          <div class="char-gallery-item"><div class="placeholder">Skill 01</div><div class="char-gallery-item-label">Skill 01</div></div>
+          <div class="char-gallery-item">
+            <img src="assets/images/mih.png" alt="Happy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+            <div class="placeholder" style="display:none;">Happy</div>
+            <div class="char-gallery-item-label">Happy</div>
+          </div>
+          <div class="char-gallery-item">
+            <img src="assets/images/mis.png" alt="Sad" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+            <div class="placeholder" style="display:none;">Sad</div>
+            <div class="char-gallery-item-label">Sad</div>
+          </div>
+          <div class="char-gallery-item">
+            <img src="assets/images/mia.png" alt="Angry" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+            <div class="placeholder" style="display:none;">Angry</div>
+            <div class="char-gallery-item-label">Angry</div>
+          </div>
         </div>
       </div>
     </div>
 
     <!-- Tono Hanna -->
-    <div class="char-card fade">
+    <div class="char-card fade" id="hanna">
       <div class="char-top">
         <div class="char-mugshot">
           <img src="assets/images/hanna.png" alt="Tono Hanna" />
@@ -548,15 +667,27 @@
       <div class="char-gallery">
         <div class="char-gallery-label">Expressions &amp; Skills</div>
         <div class="char-gallery-grid">
-          <div class="char-gallery-item"><div class="placeholder">Normal</div><div class="char-gallery-item-label">Normal</div></div>
-          <div class="char-gallery-item"><div class="placeholder">Happy</div><div class="char-gallery-item-label">Happy</div></div>
-          <div class="char-gallery-item"><div class="placeholder">Skill 01</div><div class="char-gallery-item-label">Skill 01</div></div>
+          <div class="char-gallery-item">
+            <img src="assets/images/hah.png" alt="Happy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+            <div class="placeholder" style="display:none;">Happy</div>
+            <div class="char-gallery-item-label">Happy</div>
+          </div>
+          <div class="char-gallery-item">
+            <img src="assets/images/has.png" alt="Sad" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+            <div class="placeholder" style="display:none;">Sad</div>
+            <div class="char-gallery-item-label">Sad</div>
+          </div>
+          <div class="char-gallery-item">
+            <img src="assets/images/haa.png" alt="Angry" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+            <div class="placeholder" style="display:none;">Angry</div>
+            <div class="char-gallery-item-label">Angry</div>
+          </div>
         </div>
       </div>
     </div>
     
     <!-- Tachibana Sherry -->
-    <div class="char-card fade">
+    <div class="char-card fade" id="sherry">
       <div class="char-top">
         <div class="char-mugshot">
           <img src="assets/images/sherry.png" alt="Tachibana Sherry" />
@@ -587,15 +718,27 @@
       <div class="char-gallery">
         <div class="char-gallery-label">Expressions &amp; Skills</div>
         <div class="char-gallery-grid">
-          <div class="char-gallery-item"><div class="placeholder">Normal</div><div class="char-gallery-item-label">Normal</div></div>
-          <div class="char-gallery-item"><div class="placeholder">Happy</div><div class="char-gallery-item-label">Happy</div></div>
-          <div class="char-gallery-item"><div class="placeholder">Skill 01</div><div class="char-gallery-item-label">Skill 01</div></div>
+          <div class="char-gallery-item">
+            <img src="assets/images/shh.png" alt="Happy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+            <div class="placeholder" style="display:none;">Happy</div>
+            <div class="char-gallery-item-label">Happy</div>
+          </div>
+          <div class="char-gallery-item">
+            <img src="assets/images/she.png" alt="Sad" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+            <div class="placeholder" style="display:none;">Sad</div>
+            <div class="char-gallery-item-label">Sad</div>
+          </div>
+          <div class="char-gallery-item">
+            <img src="assets/images/sha.png" alt="Angry" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+            <div class="placeholder" style="display:none;">Angry</div>
+            <div class="char-gallery-item-label">Angry</div>
+          </div>
         </div>
       </div>
     </div>
 
     <!-- Tsukihiro Yuki-->
-    <div class="char-card fade">
+    <div class="char-card fade" id="tsukishiro">
       <div class="char-top">
         <div class="char-mugshot">
           <img src="assets/images/tsukihiro_yuki.png" alt="Tsukihiro Yuki" />
@@ -619,14 +762,6 @@
           <div class="bio-desc">[ The Great Witch that have caused such tragedy. ]</div>
         </div>
       </div>
-      <div class="char-gallery">
-        <div class="char-gallery-label">Expressions &amp; Skills</div>
-        <div class="char-gallery-grid">
-          <div class="char-gallery-item"><div class="placeholder">Normal</div><div class="char-gallery-item-label">Normal</div></div>
-          <div class="char-gallery-item"><div class="placeholder">Happy</div><div class="char-gallery-item-label">Happy</div></div>
-          <div class="char-gallery-item"><div class="placeholder">Skill 01</div><div class="char-gallery-item-label">Skill 01</div></div>
-        </div>
-      </div>
     </div>
 
   </section>
@@ -636,7 +771,7 @@
     <ul>
       <li><a href="index.html">Home</a></li>
       <li><a href="#">About</a></li>
-      <li><a href="mailto:jezekielbolofer09@gmail.com" target="_blank">Contact</a></li>
+      <li><a href="/cdn-cgi/l/email-protection#a3c9c6d9c6c8cac6cfc1cccfccc5c6d1939ae3c4cec2cacf8dc0ccce" target="_blank">Contact</a></li>
     </ul>
   </footer>
-  
+ 
